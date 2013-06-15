@@ -1,4 +1,4 @@
-setTimeout(function() {
+setInterval(function() {
 	console.log('nodejs!');
 }, 2000);
 
