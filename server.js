@@ -1,12 +1,10 @@
 var http = require('http');
+var static = require('node-static');
+
+var files = new static.Server('./public');
 
 var server = http.createServer(function(request, response) {
-	response.writeHead(200, {'Content-Type': 'text/plain'});
-	response.write('Hello\n');
-
-	setTimeout(function() {
-		response.end('nodejs\n');
-	}, 2000);
+	files.serve(request, response);
 });
 
 server.listen(8080);
