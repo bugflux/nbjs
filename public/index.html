@@ -7,6 +7,20 @@
 	<script>
 		var socket = io.connect(window.location.origin);
 		console && console.log('Connected to server');
+
+		var occupy = function(seat) {
+			socket.emit('occupy', { seat: seat })
+			console.log('Occupied ' + seat);
+		};
+
+		var free = function(seat) {
+			socket.emit('free', { seat: seat })
+			console.log('Freed ' + seat);
+		};
+
+		// test
+		occupy('x');
+		free('x');
 	</script>
 	Hello static file!
 </body>

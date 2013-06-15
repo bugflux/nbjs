@@ -14,5 +14,13 @@ var io = require('socket.io').listen(server, { log: false });
 
 io.sockets.on('connection', function(socket) {
 	console.log('client connected');
+
+	socket.on('occupy', function(data) {
+		console.log('Seat ' + data.seat + ' occupied');
+	});
+
+	socket.on('free', function(data) {
+		console.log('Seat ' + data.seat + ' freed');
+	});
 });
 
