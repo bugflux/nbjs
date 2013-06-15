@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <head>
+	<title>NodeJS</title>
 </head>
 <body>
-Hello static file!
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		var socket = io.connect(window.location.origin);
+		console && console.log('Connected to server');
+	</script>
+	Hello static file!
 </body>

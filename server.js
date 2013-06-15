@@ -8,3 +8,11 @@ var server = http.createServer(function(request, response) {
 });
 
 server.listen(8080);
+
+
+var io = require('socket.io').listen(server, { log: false });
+
+io.sockets.on('connection', function(socket) {
+	console.log('client connected');
+});
+
