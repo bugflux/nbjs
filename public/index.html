@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <head>
 	<title>NodeJS</title>
+	<link rel="stylesheet" type="text/css" href="css/room.css">
 </head>
-<body>
+<body onload="setup();">
+
 	<script src="/socket.io/socket.io.js"></script>
-	<script>
-		var socket = io.connect(window.location.origin);
-		console && console.log('Connected to server');
+	<script src="js/web_service.js"></script>
 
-		var occupy = function(seat) {
-			socket.emit('occupy', { seat: seat })
-			console.log('Occupied ' + seat);
-		};
+	<script src="js/room_service.js"></script>
 
-		var free = function(seat) {
-			socket.emit('free', { seat: seat })
-			console.log('Freed ' + seat);
-		};
+	<table id="room">
+	</table>
 
-		// test
-		occupy('x');
-		free('x');
-	</script>
-	Hello static file!
 </body>
