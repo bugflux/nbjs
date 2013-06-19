@@ -40,5 +40,13 @@ io.sockets.on('connection', function(socket) {
 			console.log('Seat ' + data.seat + ' freed');
 		}
 	});
+
+	socket.on('hover', function(data) {
+		socket.broadcast.emit('hover', { seats: [ data.seat ] });
+	});
+
+	socket.on('unHover', function(data) {
+		socket.broadcast.emit('unHover', { seats: [ data.seat ] });
+	});
 });
 

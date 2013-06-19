@@ -12,6 +12,10 @@
 	background-color: #888800;
 }
 
+.seat.hovered {
+	background-color: #888888;
+}
+
 .seat.mine {
 	background-color: #000088;
 }

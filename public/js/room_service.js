@@ -19,6 +19,19 @@ var toggle = function(seat) {
 	}
 }
 
+var hover = function(seat) {
+	if (seat.classList.contains('occupied') || seat.classList.contains('mine')) {
+		// don't 'hover' occupied seats
+		return;
+	}
+
+	webService.hover(seat.id);
+};
+
+var unHover = function(seat) {
+	webService.unHover(seat.id);
+};
+
 
 var width = 32;
 var height = 16;
@@ -62,6 +75,8 @@ var buildTable = function() {
 	room.appendChild(thead);
 	room.appendChild(tbody);
 	room.addEventListener('click', function(event) { return toggle(event.target); });
+	room.addEventListener('mouseover', function(event) { return hover(event.target); });
+	room.addEventListener('mouseout', function(event) { return unHover(event.target); });
 };
 
 var getColumn = function(index) {

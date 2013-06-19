@@ -14,6 +14,14 @@ function WebService(endpoint) {
 		socket.emit('free', { seat: seat })
 	};
 
+	this.hover = function(seat) {
+		socket.emit('hover', { seat: seat });
+	};
+
+	this.unHover = function(seat) {
+		socket.emit('unHover', { seat: seat });
+	};
+
 
 	// handlers for third party events
 	socket.on('occupy', function(data) {
@@ -25,6 +33,18 @@ function WebService(endpoint) {
 	socket.on('free', function(data) {
 		for (var s in data.seats) {
 			document.getElementById(data.seats[s]).classList.remove('occupied');
+		}
+	});
+
+	socket.on('hover', function(data) {
+		for (var s in data.seats) {
+			document.getElementById(data.seats[s]).classList.add('hovered');
+		}
+	});
+
+	socket.on('unHover', function(data) {
+		for (var s in data.seats) {
+			document.getElementById(data.seats[s]).classList.remove('hovered');
 		}
 	});
 
