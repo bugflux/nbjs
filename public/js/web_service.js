@@ -26,6 +26,7 @@ function WebService(endpoint) {
 	// handlers for third party events
 	socket.on('occupy', function(data) {
 		for (var s in data.seats) {
+			document.getElementById(data.seats[s]).classList.remove('hovered');
 			document.getElementById(data.seats[s]).classList.add('occupied');
 		}
 	});

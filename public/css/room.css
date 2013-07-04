@@ -1,25 +1,25 @@
 
 .seat {
 	min-width: 32px;
-	background-color: #008800;
+	background-color: #000000;
 }
 
 .seat.occupied,.seat.occupied:hover {
-	background-color: #880000;
+	background-color: #FF0000;
 }
 
 .seat:hover {
-	background-color: #888800;
+	background-color: #FFFFFF;
 }
 
 .seat.hovered {
-	background-color: #888888;
+	background-color: #FFFFFF;
 }
 
 .seat.mine {
-	background-color: #000088;
+	background-color: #FF0000;
 }
 
 .seat.mine,.seat.mine:hover {
-	background-color: #008888;
+	background-color: #FF0000;
 }

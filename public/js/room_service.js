@@ -33,8 +33,8 @@ var unHover = function(seat) {
 };
 
 
-var width = 32;
-var height = 16;
+var width = 34;
+var height = 9
 
 var buildTable = function() {
 	var seats = '';
