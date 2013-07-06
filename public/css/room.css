@@ -5,21 +5,21 @@
 }
 
 .seat.occupied,.seat.occupied:hover {
-	background-color: #FF0000;
+	background-color: #FFFFFF;
 }
 
 .seat:hover {
-	background-color: #FFFFFF;
+	background-color: #FF0000;
 }
 
 .seat.hovered {
-	background-color: #FFFFFF;
+	background-color: #FF0000;
 }
 
 .seat.mine {
-	background-color: #FF0000;
+	background-color: #FFFFFF;
 }
 
 .seat.mine,.seat.mine:hover {
-	background-color: #FF0000;
+	background-color: #FFFFFF;
 }
