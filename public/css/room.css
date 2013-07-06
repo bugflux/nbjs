@@ -1,6 +1,7 @@
 
 .seat {
 	min-width: 32px;
+	height: 32px;
 	background-color: #000000;
 }
 
@@ -20,6 +21,6 @@
 	background-color: #FFFFFF;
 }
 
-.seat.mine,.seat.mine:hover {
-	background-color: #FFFFFF;
+.seat.mine:hover {
+	background-color: #FF0000;
 }
