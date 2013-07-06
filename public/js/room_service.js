@@ -46,7 +46,7 @@ var buildTable = function() {
 	hr.appendChild(document.createElement('th'));
 	for (var c = 0; c < width; c++) {
 		var th = document.createElement('th');
-		th.innerText = getColumn(c);
+		th.textContent = getColumn(c);
 		hr.appendChild(th);
 	}
 	thead.appendChild(hr);
@@ -57,7 +57,7 @@ var buildTable = function() {
 		var tr = document.createElement('tr');
 
 		var td = document.createElement('td');
-		td.innerText = getRow(r);
+		td.textContent = getRow(r);
 
 		tr.appendChild(td);
 		for (var c = 0; c < width; c++) {
